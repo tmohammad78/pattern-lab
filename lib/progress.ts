@@ -2,6 +2,7 @@
 
 import type { EpisodeSectionId, LastVisited, UserProgress } from "./types";
 import { episodeKey } from "./utils";
+import { scheduleProgressSync } from "./progress-sync";
 
 const PROGRESS_PREFIX = "pattern-lab-progress-";
 
@@ -33,7 +34,12 @@ export function getProgress(userId: string): UserProgress {
 }
 
 export function saveProgress(progress: UserProgress): void {
-  localStorage.setItem(storageKey(progress.userId), JSON.stringify(progress));
+  const payload: UserProgress = {
+    ...progress,
+    updatedAt: new Date().toISOString(),
+  };
+  localStorage.setItem(storageKey(payload.userId), JSON.stringify(payload));
+  scheduleProgressSync(payload);
 }
 
 function touchStreak(progress: UserProgress): UserProgress {
@@ -160,7 +166,7 @@ export function exportProgress(userId: string): void {
   URL.revokeObjectURL(url);
 }
 
-export function importProgress(
+export async function importProgress(
   userId: string,
   file: File
 ): Promise<UserProgress> {

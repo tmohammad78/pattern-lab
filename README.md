@@ -2,6 +2,17 @@
 
 A config-driven learning platform for mastering algorithmic patterns — built for **Snapp Pay** internal interview prep.
 
+## Links
+
+| | |
+|---|---|
+| **Live app** | [snapppay-pattern-lab.vercel.app](https://snapppay-pattern-lab.vercel.app) |
+| **Repository** | [github.com/tmohammad78/pattern-lab](https://github.com/tmohammad78/pattern-lab) |
+| **Vercel project** | `snapppay-pattern-lab` |
+| **Latest release** | [v0.2.0](https://github.com/tmohammad78/pattern-lab/releases/tag/v0.2.0) |
+
+**Demo login:** `demo@snapppay.ir` / `patternlab123`
+
 ## Quick Start
 
 ```bash
@@ -11,7 +22,24 @@ npm run dev
 
 Open [http://localhost:3000/login](http://localhost:3000/login)
 
-**Demo credentials:** `demo@snapppay.ir` / `patternlab123`
+## Deployment
+
+Production is hosted on **Vercel** and deploys automatically from the `main` branch.
+
+```bash
+# Manual deploy (optional)
+vercel --prod
+```
+
+| Setting | Value |
+|---------|-------|
+| Production URL | https://snapppay-pattern-lab.vercel.app |
+| Vercel project | `snapppay-pattern-lab` |
+| Node.js | 20.x (Vercel default) |
+
+### Persistent progress (production)
+
+Connect **Vercel KV** or **Upstash Redis** in the Vercel dashboard so learner progress survives redeploys. See [Progress Storage](#progress-storage) below.
 
 ## Features
 
@@ -110,7 +138,26 @@ Add the hash to `users.json` — no signup UI, admin adds emails manually.
 
 ## Progress Storage
 
-Progress is stored in **localStorage** per user. Use **Export/Import** on the Progress page to backup or transfer between devices.
+Progress is saved in **two places**:
+
+1. **Browser (localStorage)** — fast, offline-friendly cache on the same device
+2. **Server store** — survives new Vercel deploys and works across devices
+
+Every progress update syncs to `/api/progress` automatically (debounced).
+
+### Local development
+Progress files are written to `data/progress/{email}.json` (gitignored).
+
+### Production (Vercel) — required for deploy-safe storage
+
+1. Open [Vercel Dashboard](https://vercel.com) → your project → **Storage**
+2. Create **KV** or **Upstash Redis** and connect it to `snapppay-pattern-lab`
+3. Redeploy — env vars `KV_REST_API_URL` and `KV_REST_API_TOKEN` are added automatically
+
+Without KV/Redis, progress stays in the browser only and can be lost when switching devices or clearing cache.
+
+### Manual backup
+Use **Export Progress** / **Import Progress** on the Progress page anytime.
 
 ## Project Structure
 

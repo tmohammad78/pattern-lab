@@ -98,6 +98,7 @@ export interface UserProgress {
   xp: number;
   problemsSolved: number;
   weeklyActivity: number[];
+  updatedAt?: string;
 }
 
 export interface SearchItem {

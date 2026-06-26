@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card } from "@/components/ui/card";
 import { login, getSession } from "@/lib/auth";
+import { hydrateProgressFromServer } from "@/lib/progress-sync";
 import type { User } from "@/lib/types";
 
 interface LoginPageProps {
@@ -32,6 +33,7 @@ export function LoginForm({ users }: LoginPageProps) {
     const session = await login(email, password, users);
     setLoading(false);
     if (session) {
+      await hydrateProgressFromServer(session.email);
       router.push("/");
     } else {
       setError("Incorrect password for this email");

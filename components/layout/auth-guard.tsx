@@ -3,18 +3,25 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { getSession } from "@/lib/auth";
+import { hydrateProgressFromServer } from "@/lib/progress-sync";
 
 export function AuthGuard({ children }: { children: React.ReactNode }) {
   const router = useRouter();
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    const session = getSession();
-    if (!session) {
-      router.replace("/login");
-    } else {
+    async function init() {
+      const session = getSession();
+      if (!session) {
+        router.replace("/login");
+        return;
+      }
+
+      await hydrateProgressFromServer(session.email);
       setReady(true);
     }
+
+    void init();
   }, [router]);
 
   if (!ready) {
