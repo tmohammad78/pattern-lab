@@ -1,0 +1,15 @@
+{
+  "mode": "published-only",
+  "patterns": ["two-pointers"],
+  "episodes": ["two-pointers/boats-to-save-people"],
+  "categories": ["arrays"],
+  "resources": [],
+  "navigation": {
+    "home": true,
+    "patterns": true,
+    "episodes": true,
+    "playground": true,
+    "resources": false,
+    "progress": true
+  }
+}

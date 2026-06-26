@@ -1,0 +1,50 @@
+[
+  {
+    "id": "neetcode-roadmap",
+    "title": "NeetCode Roadmap",
+    "description": "Curated list of essential LeetCode problems organized by pattern.",
+    "url": "https://neetcode.io/roadmap",
+    "type": "course",
+    "tags": ["patterns", "leetcode"]
+  },
+  {
+    "id": "cracking-coding-interview",
+    "title": "Cracking the Coding Interview",
+    "description": "Classic interview prep book covering data structures, algorithms, and system design.",
+    "url": "https://www.crackingthecodinginterview.com/",
+    "type": "book",
+    "tags": ["interview", "fundamentals"]
+  },
+  {
+    "id": "two-pointers-video",
+    "title": "Two Pointers Technique Explained",
+    "description": "Visual walkthrough of inward and unidirectional two-pointer patterns.",
+    "url": "https://www.youtube.com/results?search_query=two+pointers+leetcode",
+    "type": "video",
+    "tags": ["two-pointers", "arrays"]
+  },
+  {
+    "id": "sliding-window-article",
+    "title": "Sliding Window Masterclass",
+    "description": "In-depth article on fixed and variable-size sliding window problems.",
+    "url": "https://leetcode.com/discuss/general-discussion/1127238/sliding-window-template",
+    "type": "article",
+    "tags": ["sliding-window", "arrays"]
+  },
+  {
+    "id": "visualgo",
+    "title": "VisuAlgo",
+    "description": "Interactive visualizations for sorting, graphs, trees, and more.",
+    "url": "https://visualgo.net/en",
+    "type": "course",
+    "tags": ["visualization", "algorithms"]
+  },
+  {
+    "id": "big-o-cheatsheet",
+    "title": "Big-O Cheat Sheet",
+    "description": "Quick reference for time and space complexity of common operations.",
+    "url": "https://www.bigocheatsheet.com/",
+    "type": "article",
+    "tags": ["complexity", "reference"]
+  }
+]

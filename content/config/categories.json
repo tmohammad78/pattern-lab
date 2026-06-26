@@ -1,0 +1,9 @@
+[
+  { "id": "arrays", "label": "Arrays", "color": "chart-1", "total": 24 },
+  { "id": "strings", "label": "Strings", "color": "chart-2", "total": 12 },
+  { "id": "trees", "label": "Trees", "color": "chart-2", "total": 18 },
+  { "id": "graphs", "label": "Graphs", "color": "chart-3", "total": 15 },
+  { "id": "dp", "label": "Dynamic Prog.", "color": "chart-4", "total": 20 },
+  { "id": "greedy", "label": "Greedy", "color": "chart-5", "total": 10 },
+  { "id": "math", "label": "Math", "color": "chart-4", "total": 8 }
+]

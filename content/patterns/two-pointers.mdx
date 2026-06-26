@@ -1,0 +1,24 @@
+## Core Intuition
+
+Imagine a row of houses, each with a different number of people. A rescue boat drives past and can pick up a **fixed number of houses** at a time. Instead of recounting everyone from scratch each time the boat moves one house over, you **subtract the house you left** and **add the new house you entered**.
+
+Two pointers work the same way on arrays: instead of nested loops checking every pair, you maintain two indices and move them based on a simple rule — cutting complexity from **O(n²) to O(n)**.
+
+## Signal Words
+
+Watch for these phrases in problem statements — they often hint at two pointers:
+
+- "sorted array"
+- "pair whose sum equals..."
+- "remove duplicates in-place"
+- "palindrome check"
+- "container with most water"
+- "minimum boats / pairs"
+
+## Complexity
+
+| Variant | Time | Space |
+|---------|------|-------|
+| Inward (sorted) | O(n) | O(1) |
+| Inward (unsorted + sort) | O(n log n) | O(1) |
+| Unidirectional | O(n) | O(1) |

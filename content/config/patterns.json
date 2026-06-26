@@ -1,0 +1,96 @@
+{
+  "two-pointers": {
+    "title": "Two Pointers",
+    "slug": "two-pointers",
+    "description": "Use two indices moving through a sequence to eliminate redundant comparisons and achieve linear time.",
+    "categories": ["arrays"],
+    "difficulty": "medium",
+    "episodeCount": 1,
+    "tags": ["sorted-array", "pair-sum"],
+    "icon": "↔",
+    "color": "chart-2",
+    "variants": [
+      {
+        "id": "inward",
+        "title": "Inward Traversal",
+        "description": "Start from both ends and move pointers toward the center — ideal for sorted arrays and pairing problems."
+      },
+      {
+        "id": "unidirectional",
+        "title": "Unidirectional Traversal",
+        "description": "Both pointers move in the same direction at different speeds — common in linked lists and duplicate removal."
+      },
+      {
+        "id": "staged",
+        "title": "Staged Traversal",
+        "description": "Process the array in phases with pointer resets — useful for multi-pass optimizations."
+      }
+    ],
+    "mdx": "patterns/two-pointers.mdx"
+  },
+  "sliding-window": {
+    "title": "Sliding Window",
+    "slug": "sliding-window",
+    "description": "Maintain a window of elements that slides across the array, updating incrementally instead of recomputing.",
+    "categories": ["arrays", "strings"],
+    "difficulty": "medium",
+    "episodeCount": 0,
+    "tags": ["subarray", "substring"],
+    "icon": "▭",
+    "color": "chart-1",
+    "variants": [],
+    "mdx": "patterns/sliding-window.mdx"
+  },
+  "binary-search": {
+    "title": "Binary Search",
+    "slug": "binary-search",
+    "description": "Repeatedly halve the search space on sorted or monotonic data to achieve logarithmic time complexity.",
+    "categories": ["arrays"],
+    "difficulty": "easy",
+    "episodeCount": 0,
+    "tags": ["sorted", "divide-conquer"],
+    "icon": "⊘",
+    "color": "chart-4",
+    "variants": [],
+    "mdx": "patterns/binary-search.mdx"
+  },
+  "bfs": {
+    "title": "Breadth-First Search",
+    "slug": "bfs",
+    "description": "Explore graphs level by level using a queue — ideal for shortest path and level-order traversal.",
+    "categories": ["graphs", "trees"],
+    "difficulty": "medium",
+    "episodeCount": 0,
+    "tags": ["graph", "tree", "queue"],
+    "icon": "◎",
+    "color": "chart-5",
+    "variants": [],
+    "mdx": "patterns/bfs.mdx"
+  },
+  "dfs": {
+    "title": "Depth-First Search",
+    "slug": "dfs",
+    "description": "Dive deep into graph or tree structures using recursion or a stack before backtracking.",
+    "categories": ["graphs", "trees"],
+    "difficulty": "medium",
+    "episodeCount": 0,
+    "tags": ["graph", "tree", "recursion"],
+    "icon": "↓",
+    "color": "chart-3",
+    "variants": [],
+    "mdx": "patterns/dfs.mdx"
+  },
+  "dynamic-programming": {
+    "title": "Dynamic Programming",
+    "slug": "dynamic-programming",
+    "description": "Break problems into overlapping subproblems and cache results to avoid redundant computation.",
+    "categories": ["dp"],
+    "difficulty": "hard",
+    "episodeCount": 0,
+    "tags": ["memoization", "tabulation"],
+    "icon": "◫",
+    "color": "chart-4",
+    "variants": [],
+    "mdx": "patterns/dynamic-programming.mdx"
+  }
+}

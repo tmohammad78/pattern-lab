@@ -1,0 +1,28 @@
+{
+  "two-pointers/boats-to-save-people": {
+    "patternSlug": "two-pointers",
+    "slug": "boats-to-save-people",
+    "title": "The Boat Optimization Problem",
+    "subtitle": "Boats to Save People",
+    "order": 1,
+    "difficulty": "medium",
+    "readTimeMin": 12,
+    "heroDescription": "Use a two-pointer sweep on sorted weights to pair the lightest with the heaviest — minimizing boats with a greedy O(n log n) strategy.",
+    "leetcodeUrl": "https://leetcode.com/problems/boats-to-save-people/",
+    "mdx": "episodes/two-pointers/boats-to-save-people.mdx",
+    "sections": [
+      "story",
+      "problem",
+      "diagram",
+      "try-yourself",
+      "brute-force",
+      "observation",
+      "pattern-discovery",
+      "solution",
+      "complexity",
+      "related",
+      "quiz",
+      "takeaways"
+    ]
+  }
+}

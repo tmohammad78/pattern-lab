@@ -1,0 +1,12 @@
+[
+  {
+    "email": "demo@snapppay.ir",
+    "name": "Arjun Kumar",
+    "passwordHash": "$2b$10$Rka36JNUHDM59ipyO2rECu1vZqhsK6A5IMCTzqX1BULltMz.MBMka"
+  },
+  {
+    "email": "admin@snapppay.ir",
+    "name": "Admin User",
+    "passwordHash": "$2b$10$LJ3SUbs8tzrCzQxRdks7uuIXWxPGD3jqSPNDyKVhZiwHvZf1uwsCC"
+  }
+]
