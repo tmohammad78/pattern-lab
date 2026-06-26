@@ -15,6 +15,7 @@ A config-driven learning platform for mastering algorithmic patterns — built f
 | **Repository** | [github.com/tmohammad78/pattern-lab](https://github.com/tmohammad78/pattern-lab) |
 | **Vercel project** | `snapppay-pattern-lab` |
 | **Latest release** | [v0.2.0](https://github.com/tmohammad78/pattern-lab/releases/tag/v0.2.0) |
+| **Repo settings** | [`.github/REPOSITORY.md`](.github/REPOSITORY.md) |
 
 **Demo login:** `demo@snapppay.ir` / `patternlab123`
 

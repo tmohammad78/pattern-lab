@@ -1,0 +1,67 @@
+name: Publish GitHub releases
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".github/workflows/publish-releases.yml"
+      - "CHANGELOG.md"
+
+permissions:
+  contents: write
+
+jobs:
+  releases:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Create missing releases for tags
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: tags } = await github.rest.repos.listTags({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              per_page: 20,
+            });
+
+            for (const tag of tags) {
+              if (!tag.name.startsWith("v")) continue;
+
+              try {
+                await github.rest.repos.getReleaseByTag({
+                  owner: context.repo.owner,
+                  repo: context.repo.repo,
+                  tag: tag.name,
+                });
+                continue;
+              } catch (error) {
+                if (error.status !== 404) throw error;
+              }
+
+              const version = tag.name.replace(/^v/, "");
+              let body = `Release ${tag.name}\n\n**Live:** https://snapppay-pattern-lab.vercel.app`;
+
+              try {
+                const fs = require("fs");
+                const changelog = fs.readFileSync("CHANGELOG.md", "utf8");
+                const marker = `## [${version}]`;
+                const start = changelog.indexOf(marker);
+                if (start !== -1) {
+                  const rest = changelog.slice(start + marker.length);
+                  const end = rest.search(/\n## \[/);
+                  body = (end === -1 ? rest : rest.slice(0, end)).trim();
+                }
+              } catch {}
+
+              await github.rest.repos.createRelease({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                tag_name: tag.name,
+                name: tag.name,
+                body,
+              });
+            }
