@@ -1,0 +1,13 @@
+{
+  "description": "Snapp Pay internal algorithm pattern learning platform (NeetCode-style)",
+  "homepage": "https://snapppay-pattern-lab.vercel.app",
+  "topics": [
+    "nextjs",
+    "react",
+    "typescript",
+    "snapp-pay",
+    "algorithms",
+    "learning-platform",
+    "pattern-lab"
+  ]
+}

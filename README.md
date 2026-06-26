@@ -2,6 +2,11 @@
 
 A config-driven learning platform for mastering algorithmic patterns — built for **Snapp Pay** internal interview prep.
 
+[![Live app](https://img.shields.io/badge/live-snapppay--pattern--lab.vercel.app-007dfa?style=for-the-badge)](https://snapppay-pattern-lab.vercel.app)
+[![Release](https://img.shields.io/github/v/release/tmohammad78/pattern-lab?label=release&color=007dfa)](https://github.com/tmohammad78/pattern-lab/releases)
+[![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-61dafb?style=flat-square&logo=react)](https://react.dev/)
+
 ## Links
 
 | | |
